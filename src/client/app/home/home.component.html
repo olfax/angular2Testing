@@ -1,0 +1,15 @@
+<p>Voici, une liste de participants. Si vous n'êtes pas dans la liste, ajoutez votre nom</p>
+
+<form (submit)="addName()">
+  <input [(ngModel)]="newName" name="newName" placeholder="Participant">
+  <button type="submit">Add</button>
+</form>
+
+<ul>
+  <li *ngFor="let name of names">{{name}}</li>
+</ul>
+
+
+<button (click)="clicked()">Affiche</button>
+
+Url : {{url}} <br>

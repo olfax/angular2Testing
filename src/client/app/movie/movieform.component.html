@@ -1,0 +1,7 @@
+  <form (ngSubmit)="onMovieSubmit()" [formGroup]="movieFormGroup">
+      <input type="text" formControlName="movieTitle" placeholder="titre du film" />
+      <input type="text" formControlName="movieDirector" placeholder="réalisateur" />
+      <button type="submit">Ajouer </button>
+    </form>
+
+    {{movieFormGroup.value | json}}
