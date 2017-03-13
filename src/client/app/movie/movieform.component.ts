@@ -38,7 +38,7 @@ export class MovieFormComponent implements OnInit  {
   }
 
   onMovieSubmit() {
-    Console.log("movie submit");
+    console.log("movie submit");
    
   }
 

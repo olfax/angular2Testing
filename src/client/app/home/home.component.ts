@@ -17,7 +17,8 @@ export class HomeComponent implements OnInit {
   errorMessage: string;
   names: any[] = [];
 
-  url: string = 'http://www.google.fr';
+  message: string = 'aucun message';
+
 
   /**
    * Creates an instance of the HomeComponent with the injected
@@ -28,13 +29,11 @@ export class HomeComponent implements OnInit {
   constructor(public nameListService: NameListService,
        private sanitizer: DomSanitizer) {}
 
-   getURL() {
-    return this.sanitizer.bypassSecurityTrustUrl(this.url);
-  }
 
-
-  clicked() {
-    this.url="www.lavoixdunord.fr";
+  remove(name:any ) {
+    // delete this.names[name];
+    this.names.shift(); 
+    this.message ="Départ de : "+ name;
   }
 
    
